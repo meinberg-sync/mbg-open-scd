@@ -1,0 +1,40 @@
+[submodule "open-scd-core"]
+	path = open-scd-core
+	url = https://www.github.com/openenergytools/open-scd-core
+	branch = gh-pages
+[submodule "plugins/scl-editor-landing"]
+	path = plugins/scl-editor-landing
+	url = https://www.github.com/openenergytools/scl-editor-landing
+	branch = gh-pages
+[submodule "plugins/oscd-open"]
+	path = plugins/oscd-open
+	url = https://www.github.com/openenergytools/oscd-open
+	branch = gh-pages
+[submodule "plugins/oscd-save"]
+	path = plugins/oscd-save
+	url = https://www.github.com/openenergytools/oscd-save
+	branch = gh-pages
+[submodule "plugins/scl-validating"]
+	path = plugins/scl-validating
+	url = https://www.github.com/openenergytools/scl-validating
+	branch = gh-pages
+[submodule "plugins/oscd-publisher"]
+	path = plugins/oscd-publisher
+	url = https://github.com/openenergytools/oscd-publisher
+	branch = gh-pages
+[submodule "plugins/scl-wizarding"]
+	path = plugins/scl-wizarding
+	url = https://github.com/openenergytools/scl-wizarding
+	branch = gh-pages
+[submodule "plugins/oscd-communication"]
+	path = plugins/oscd-communication
+	url = https://github.com/openenergytools/scl-communication
+	branch = gh-pages
+[submodule "plugins/scl-ied-editor"]
+	path = plugins/scl-ied-editor
+	url = https://github.com/openenergytools/scl-ied-editor
+	branch = gh-pages
+[submodule "plugins/mbg-icd-extractor"]
+	path = plugins/mbg-icd-extractor
+	url = https://github.com/axellp/mbg-icd-extractor
+	branch = gh-pages
