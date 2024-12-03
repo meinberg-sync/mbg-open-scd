@@ -1,0 +1,19 @@
+* {
+  --oscd-theme-primary: #0A5FB3;
+  --oscd-theme-secondary: #b38c0a;
+  --oscd-theme-error: #dc322f;
+
+  --oscd-theme-text-font: 'Roboto';
+  --oscd-theme-icon-font: "Material Symbols Outlined";
+
+  --primary: var(--oscd-theme-primary);
+  --secondary: var(--oscd-theme-secondary);
+
+  margin: 0px;
+  padding: 0px;
+}
+
+abbr {
+  text-decoration: none;
+  border-bottom: none;
+}
