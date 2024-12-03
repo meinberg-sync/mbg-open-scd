@@ -77,8 +77,7 @@
       "icon": "edit",
       "active": true,
       "requireDoc": true,
-      "src": "plugins/scl-ied-editor/scl-ied-editor.js",
-      "TODO": "Needs to be reimplemented from legacy OpenSCD to allow editing; current version is display only"
+      "src": "plugins/mbg-ied-editor/mbg-ied-editor.js"
     }
   ]
 }

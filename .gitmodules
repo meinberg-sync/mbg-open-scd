@@ -38,3 +38,7 @@
 	path = plugins/mbg-icd-extractor
 	url = https://github.com/axellp/mbg-icd-extractor
 	branch = gh-pages
+[submodule "plugins/mbg-ied-editor"]
+	path = plugins/mbg-ied-editor
+	url = https://github.com/axellp/mbg-ied-editor.git
+	branch = gh-pages
