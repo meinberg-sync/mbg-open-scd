@@ -1,0 +1,18 @@
+{
+	"name": "Meinberg ICT",
+	"description": "Meinberg IEC61850 Configuration Tool based on OpenSCD",
+	"short_name": "MBG ICT",
+	"start_url": "/",
+	"lang": "en-US",
+	"theme_color": "#0A5FB3",
+	"display": "standalone",
+	"background_color": "#fdf6e3",
+	"orientation": "any",
+	"icons": [
+		{
+			"src": "https://www.meinbergglobal.com/images/icons/xmbg-favicon.png.pagespeed.ic.DuVgWQZS_h.webp",
+			"sizes": "180x180",
+			"type": "image/webp"
+		}
+	]
+}
