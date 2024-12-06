@@ -20,8 +20,8 @@
       "src": "plugins/oscd-save/oscd-save.js"
     },
     {
-      "name": "Extract ICD",
-      "icon": "code",
+      "name": "Extract IED",
+      "icon": "content_cut",
       "active": true,
       "requireDoc": true,
       "src": "plugins/mbg-icd-extractor/mbg-icd-extractor.js"
@@ -42,7 +42,7 @@
       "translation": {
         "de": "Wizarding"
       },
-      "icon": "edit",
+      "icon": "assistant",
       "active": true,
       "requireDoc": true,
       "src": "plugins/scl-wizarding/scl-wizarding.js"
