@@ -41,3 +41,4 @@
 [submodule "plugins/mbg-ied-extractor"]
 	path = plugins/mbg-ied-extractor
 	url = https://github.com/axelp-mbg/mbg-ied-extractor.git
+	branch = gh-pages
