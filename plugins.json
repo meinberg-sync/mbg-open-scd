@@ -24,7 +24,7 @@
       "icon": "content_cut",
       "active": true,
       "requireDoc": true,
-      "src": "plugins/mbg-icd-extractor/mbg-icd-extractor.js"
+      "src": "plugins/mbg-ied-extractor/mbg-icd-extractor.js"
     },
     {
       "name": "Validating",
