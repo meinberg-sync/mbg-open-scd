@@ -34,11 +34,10 @@
 	path = plugins/scl-ied-editor
 	url = https://github.com/openenergytools/scl-ied-editor
 	branch = gh-pages
-[submodule "plugins/mbg-icd-extractor"]
-	path = plugins/mbg-icd-extractor
-	url = https://github.com/axellp/mbg-icd-extractor
-	branch = gh-pages
 [submodule "plugins/mbg-ied-editor"]
 	path = plugins/mbg-ied-editor
-	url = https://github.com/axellp/mbg-ied-editor.git
+	url = https://github.com/axelp-mbg/mbg-ied-editor.git
 	branch = gh-pages
+[submodule "plugins/mbg-ied-extractor"]
+	path = plugins/mbg-ied-extractor
+	url = https://github.com/axelp-mbg/mbg-ied-extractor.git
