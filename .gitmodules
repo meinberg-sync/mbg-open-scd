@@ -36,9 +36,9 @@
 	branch = gh-pages
 [submodule "plugins/mbg-ied-editor"]
 	path = plugins/mbg-ied-editor
-	url = https://github.com/axelp-mbg/mbg-ied-editor.git
+	url = https://github.com/meinberg-sync/mbg-ied-editor.git
 	branch = gh-pages
 [submodule "plugins/mbg-ied-extractor"]
 	path = plugins/mbg-ied-extractor
-	url = https://github.com/axelp-mbg/mbg-ied-extractor.git
+	url = https://github.com/meinberg-sync/mbg-ied-extractor.git
 	branch = gh-pages
