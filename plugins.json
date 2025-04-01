@@ -1,26 +1,20 @@
 {
   "menu": [
     {
-      "name": "Open project",
-      "translation": {
-        "de": "Project öffnen"
-      },
+      "name": "Open File",
       "icon": "folder_open",
       "active": true,
       "src": "plugins/oscd-open/oscd-open.js"
     },
     {
-      "name": "Save project",
-      "translation": {
-        "de": "Projekt speichern"
-      },
+      "name": "Save File",
       "icon": "save",
       "active": true,
       "requireDoc": true,
       "src": "plugins/oscd-save/oscd-save.js"
     },
     {
-      "name": "Extract IED",
+      "name": "Extract CID",
       "icon": "content_cut",
       "active": true,
       "requireDoc": true,
@@ -36,16 +30,6 @@
       "requireDoc": true,
       "src": "plugins/scl-validating/scl-validating.js",
       "TODO": "Implement as feature with better quality assurance; current version is in experimental phase"
-    },
-    {
-      "name": "Wizarding",
-      "translation": {
-        "de": "Wizarding"
-      },
-      "icon": "assistant",
-      "active": true,
-      "requireDoc": true,
-      "src": "plugins/scl-wizarding/scl-wizarding.js"
     }
   ],
   "editor": [
@@ -57,6 +41,13 @@
       "icon": "start",
       "active": true,
       "src": "plugins/scl-editor-landing/scl-editor-landing.js"
+    },
+    {
+      "name": "IED",
+      "icon": "edit",
+      "active": true,
+      "requireDoc": true,
+      "src": "plugins/mbg-ied-editor/mbg-ied-editor.js"
     },
     {
       "name": "Publisher",
@@ -71,13 +62,6 @@
       "active": true,
       "requireDoc": true,
       "src": "plugins/oscd-communication/scl-communication.js"
-    },
-    {
-      "name": "IED",
-      "icon": "edit",
-      "active": true,
-      "requireDoc": true,
-      "src": "plugins/mbg-ied-editor/mbg-ied-editor.js"
     }
   ]
 }
