@@ -2,12 +2,18 @@
   "menu": [
     {
       "name": "Open File",
+      "translation": {
+        "de": "Öffnen"
+      },
       "icon": "folder_open",
       "active": true,
       "src": "plugins/oscd-open/oscd-open.js"
     },
     {
       "name": "Save File",
+      "translation": {
+        "de": "Speichern"
+      },
       "icon": "save",
       "active": true,
       "requireDoc": true,
@@ -15,6 +21,9 @@
     },
     {
       "name": "Extract CID",
+      "translation": {
+        "de": "CID extrahieren"
+      },
       "icon": "content_cut",
       "active": true,
       "requireDoc": true,
@@ -30,6 +39,13 @@
       "requireDoc": true,
       "src": "plugins/scl-validating/scl-validating.js",
       "TODO": "Implement as feature with better quality assurance; current version is in experimental phase"
+    },
+    {
+      "name": "Wizarding",
+      "icon": "assistant",
+      "active": false,
+      "requireDoc": true,
+      "src": "plugins/scl-wizarding/scl-wizarding.js"
     }
   ],
   "editor": [
@@ -44,6 +60,9 @@
     },
     {
       "name": "IED",
+      "translations": {
+        "de": "IED"
+      },
       "icon": "edit",
       "active": true,
       "requireDoc": true,
@@ -51,6 +70,9 @@
     },
     {
       "name": "Publisher",
+      "translations": {
+        "de": "Publisher"
+      },
       "icon": "publish",
       "active": true,
       "requireDoc": true,
@@ -58,6 +80,9 @@
     },
     {
       "name": "Communication",
+      "translations": {
+        "de": "Kommunikation"
+      },
       "icon": "settings_ethernet",
       "active": true,
       "requireDoc": true,
