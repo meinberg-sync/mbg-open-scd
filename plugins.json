@@ -20,9 +20,9 @@
       "src": "plugins/oscd-save/oscd-save.js"
     },
     {
-      "name": "Extract CID",
+      "name": "Extract IED",
       "translation": {
-        "de": "CID extrahieren"
+        "de": "IED extrahieren"
       },
       "icon": "content_cut",
       "active": true,
