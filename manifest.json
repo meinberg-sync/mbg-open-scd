@@ -1,6 +1,6 @@
 {
 	"name": "Meinberg ICT",
-	"description": "Meinberg IEC61850 Configuration Tool based on OpenSCD",
+	"description": "Meinberg IED Configuration Tool based on OpenSCD",
 	"short_name": "MBG ICT",
 	"start_url": "/",
 	"lang": "en-US",
