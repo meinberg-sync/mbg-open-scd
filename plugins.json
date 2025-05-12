@@ -41,6 +41,16 @@
       "TODO": "Implement as feature with better quality assurance; current version is in experimental phase"
     },
     {
+      "name": "Help",
+      "translation": {
+        "de": "Hilfe"
+      },
+      "icon": "help",
+      "active": true,
+      "requireDoc": false,
+      "src": "plugins/mbg-ict-help/mbg-ict-help.js"
+    },
+    {
       "name": "Wizarding",
       "icon": "assistant",
       "active": false,

@@ -42,3 +42,7 @@
 	path = plugins/mbg-ied-extractor
 	url = https://github.com/meinberg-sync/mbg-ied-extractor.git
 	branch = gh-pages
+[submodule "plugins/mbg-ict-help"]
+	path = plugins/mbg-ict-help
+	url = https://github.com/meinberg-sync/mbg-ict-help.git
+	branch = gh-pages
