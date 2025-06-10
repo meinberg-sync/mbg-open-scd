@@ -1,6 +1,6 @@
 [submodule "open-scd-core"]
 	path = open-scd-core
-	url = https://www.github.com/openenergytools/open-scd-core
+	url = https://www.github.com/OMICRONEnergyOSS/oscd-shell
 	branch = gh-pages
 [submodule "plugins/scl-editor-landing"]
 	path = plugins/scl-editor-landing
@@ -8,7 +8,7 @@
 	branch = gh-pages
 [submodule "plugins/oscd-open"]
 	path = plugins/oscd-open
-	url = https://www.github.com/openenergytools/oscd-open
+	url = https://www.github.com/danyill/oscd-open
 	branch = gh-pages
 [submodule "plugins/oscd-save"]
 	path = plugins/oscd-save
