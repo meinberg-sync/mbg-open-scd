@@ -1,3 +1,11 @@
+/* fallback */
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/material-symbols-outlined.woff2) format('woff2');
+}
+
 * {
   --oscd-theme-primary: #516FB4;
   --oscd-theme-secondary: #1E2947;
@@ -13,7 +21,7 @@
   --oscd-theme-base3: #F6F6F6;
 
   --oscd-theme-text-font: 'Roboto';
-  --oscd-theme-icon-font: "Material Symbols Outlined";
+  --oscd-theme-icon-font: 'Material Symbols Outlined';
 
   --primary: var(--oscd-theme-primary);
   --secondary: var(--oscd-theme-secondary);
