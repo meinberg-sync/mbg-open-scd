@@ -49,13 +49,6 @@
       "active": true,
       "requireDoc": false,
       "src": "plugins/mbg-ict-help/mbg-ict-help.js"
-    },
-    {
-      "name": "Wizarding",
-      "icon": "assistant",
-      "active": false,
-      "requireDoc": true,
-      "src": "plugins/scl-wizarding/scl-wizarding.js"
     }
   ],
   "editor": [
@@ -97,6 +90,14 @@
       "active": true,
       "requireDoc": true,
       "src": "plugins/oscd-communication/scl-communication.js"
+    }
+  ],
+  "background": [
+    {
+      "name": "Wizarding",
+      "icon": "none",
+      "requireDoc": true,
+      "src": "plugins/scl-wizarding/scl-wizarding.js"
     }
   ]
 }
