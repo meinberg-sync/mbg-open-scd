@@ -97,7 +97,13 @@
       "name": "Wizarding",
       "icon": "none",
       "requireDoc": true,
-      "src": "plugins/scl-wizarding/scl-wizarding.js"
+      "src": "plugins/oscd-background-wizard-events/oscd-background-wizard-events.js"
+    },
+    {
+      "name": "EditV1 Events Listener",
+      "icon": "none",
+      "requireDoc": true,
+      "src": "https://omicronenergyoss.github.io/oscd-background-editv1/oscd-background-editv1.js"
     }
   ]
 }
