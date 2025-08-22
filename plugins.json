@@ -69,7 +69,7 @@
       "icon": "edit",
       "active": true,
       "requireDoc": true,
-      "src": "plugins/mbg-ied-editor/mbg-ied-editor.js"
+      "src": "https://meinberg-sync.github.io/mbg-ied-editor/mbg-ied-editor.js"
     },
     {
       "name": "Publisher",
