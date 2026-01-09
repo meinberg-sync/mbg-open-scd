@@ -22904,7 +22904,7 @@ See www.iec.ch/CCv1 for copyright details
                             ><md-icon>delete_sweep</md-icon></md-icon-button
                           > `:m`<md-icon-button
                             @click=${()=>{I.textContent=b?.textContent;const _=this.shadowRoot.getElementById(`${ps(t,n,C.toString())}`);_&&(_.value=b?.textContent),this.updateValue(I,t,n,C.toString())}}
-                            ?soft-disabled=${I.textContent===b?.textContent}
+                            ?disabled=${I.textContent===b?.textContent}
                           >
                             <md-icon>sync</md-icon>
                           </md-icon-button>`}
@@ -23392,6 +23392,20 @@ See www.iec.ch/CCv1 for copyright details
 
       --oscd-text-font: var(--oscd-theme-text-font, 'Roboto');
       --oscd-icon-font: var(--oscd-theme-icon-font, 'Material Icons');
+    }
+
+    @media (prefers-color-scheme: dark) {
+      * {
+        /* Swap the color values for dark mode */
+        --oscd-base03: var(--oscd-theme-base3, #fdf6e3);
+        --oscd-base02: var(--oscd-theme-base2, #eee8d5);
+        --oscd-base01: var(--oscd-theme-base1, #93a1a1);
+        --oscd-base00: var(--oscd-theme-base0, #839496);
+        --oscd-base0: var(--oscd-theme-base00, #657b83);
+        --oscd-base1: var(--oscd-theme-base01, #586e75);
+        --oscd-base2: var(--oscd-theme-base02, #073642);
+        --oscd-base3: var(--oscd-theme-base03, #002b36);
+      }
     }
 
     main {
