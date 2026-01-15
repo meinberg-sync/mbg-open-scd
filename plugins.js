@@ -53,18 +53,9 @@ export const plugins = {
   ],
   editor: [
     {
-      name: "Start",
+      name: "IED Editor",
       translations: {
-        de: "Start",
-      },
-      icon: "start",
-      active: true,
-      src: "plugins/scl-editor-landing/scl-editor-landing.js",
-    },
-    {
-      name: "IED",
-      translations: {
-        de: "IED",
+        de: "IED Editor",
       },
       icon: "edit",
       active: true,
@@ -94,10 +85,10 @@ export const plugins = {
   ],
   background: [
     {
-      name: "Wizarding",
+      name: "Wizard Events Listener",
       icon: "none",
       requireDoc: true,
-      tagName: "oscd-background-wizard-events",
+      src: "plugins/oscd-background-wizard-events/oscd-background-wizard-events.js",
     },
     {
       name: "EditV1 Events Listener",
