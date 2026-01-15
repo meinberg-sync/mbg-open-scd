@@ -10,7 +10,7 @@
 	"orientation": "any",
 	"icons": [
 		{
-			"src": "./assets/favicon.webp",
+			"src": "favicon.webp",
 			"sizes": "180x180",
 			"type": "image/webp"
 		}
