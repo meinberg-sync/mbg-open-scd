@@ -21,8 +21,7 @@ export default {
   plugins: [
     copy({
       targets: [
-        { src: ['manifest.json','plugins','assets'], dest: 'dist' },
-        { src: ['*.css', 'fonts'], dest: 'dist/assets' },
+        { src: ['manifest.json','plugins','assets','fonts','*.css'], dest: 'dist' },
       ]
     }),
     /** Enable using HTML as rollup entrypoint */
