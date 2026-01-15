@@ -21,7 +21,8 @@ export default {
   plugins: [
     copy({
       targets: [
-        { src: ['open-scd-core','oscd-shell','plugins.js','index.js','landing-page-template.js','manifest.json','favicon.webp','plugins','fonts','assets'], dest: 'dist' },
+        { src: ['manifest.json','plugins','assets'], dest: 'dist' },
+        { src: ['*.css', 'fonts'], dest: 'dist/assets' },
       ]
     }),
     /** Enable using HTML as rollup entrypoint */
