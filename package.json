@@ -11,7 +11,7 @@
     "deploy": "npm run preinstall && npm run build && gh-pages -d dist",
     "deploy:nobuild": "gh-pages -d dist",
     "start:build": "web-dev-server --root-dir dist --app-index index.html --open",
-    "start": "web-dev-server"
+    "start": "web-dev-server --node-resolve"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.16.4",
@@ -28,5 +28,12 @@
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-workbox": "^6.2.0"
+  },
+  "dependencies": {
+    "@omicronenergy/oscd-shell": "^0.0.10",
+    "@omicronenergy/oscd-ui": "^0.0.9",
+    "@openscd/oscd-api": "^0.1.6",
+    "@webcomponents/scoped-custom-element-registry": "^0.0.10",
+    "lit": "^3.3.2"
   }
 }
