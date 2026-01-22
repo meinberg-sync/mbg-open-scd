@@ -1,9 +1,29 @@
 body {
   height: 100%;
   width: 100%;
-  background: linear-gradient(325deg,#6588db,#0887c6,#0156ab,#28375a,#0f1429);
+  background: linear-gradient(
+    325deg,
+    var(--mbg-bg-primary-300),
+    var(--mbg-open-scd-blue),
+    var(--mbg-primary-light),
+    var(--mbg-blue-300),
+    var(--mbg-blue-700)
+  );
   background-size: 300% 300%;
   animation: gradient-animation 20s ease infinite;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(
+      325deg,
+      var(--mbg-bg-primary-200),
+      var(--mbg-bg-primary-300),
+      var(--mbg-bg-primary-500)
+    );
+    background-size: 300% 300%;
+    animation: gradient-animation 20s ease infinite;
+  }
 }
 
 @keyframes gradient-animation {
