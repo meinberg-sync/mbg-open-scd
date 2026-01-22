@@ -1,8 +1,8 @@
 {
-  "name": "scl-editor",
-  "description": "OpenEnergyTools distribution based on open-scd-core",
+  "name": "meinberg-ict",
+  "description": "Meinberg's IED Configuration Tool, powered by OpenSCD.",
   "license": "Apache-2.0",
-  "author": "Jakob Vogelsang",
+  "author": "Axel Perales - Meinberg Funkuhren GmbH & Co. KG",
   "version": "0.0.0",
   "scripts": {
     "preinstall": "git submodule update --init --recursive && npm run update",
@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@omicronenergy/oscd-background-editv1": "^0.0.6",
-    "@omicronenergy/oscd-shell": "^0.0.10",
+    "@omicronenergy/oscd-shell": "^0.0.11",
     "@omicronenergy/oscd-ui": "^0.0.9",
     "@openscd/oscd-api": "^0.1.6",
     "@webcomponents/scoped-custom-element-registry": "^0.0.10",
