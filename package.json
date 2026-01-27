@@ -31,6 +31,9 @@
   },
   "dependencies": {
     "@omicronenergy/oscd-background-editv1": "^0.0.6",
+    "@omicronenergy/oscd-background-wizard-events": "^0.0.1",
+    "@omicronenergy/oscd-editor-diff": "^0.0.2",
+    "@omicronenergy/oscd-editor-source": "^0.0.2",
     "@omicronenergy/oscd-shell": "^0.0.11",
     "@omicronenergy/oscd-ui": "^0.0.9",
     "@openscd/oscd-api": "^0.1.6",
