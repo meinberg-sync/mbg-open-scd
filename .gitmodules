@@ -30,7 +30,3 @@
 	path = plugins/mbg-ict-help
 	url = https://github.com/meinberg-sync/mbg-ict-help.git
 	branch = gh-pages
-[submodule "plugins/oscd-background-wizard-events"]
-	path = plugins/oscd-background-wizard-events
-	url = https://github.com/OMICRONEnergyOSS/oscd-background-wizard-events.git
-	branch = gh-pages

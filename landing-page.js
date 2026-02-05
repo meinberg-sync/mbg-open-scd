@@ -1,6 +1,17 @@
 import { LitElement, html, css } from 'lit';
 
 export class MICTLandingPage extends LitElement {
+  shell = this.closest("oscd-shell");
+
+  static properties = {
+    menuPlugins: { state: true },
+  };
+
+  constructor() {
+    super();
+    this.menuPlugins = [];
+  }
+
   handleMenuPluginClick(plugin) {
     const oscdShell = this.closest("oscd-shell");
     if (oscdShell) {
@@ -13,9 +24,14 @@ export class MICTLandingPage extends LitElement {
     }
   }
 
-  getMenuPlugins() {
-    const menuPlugins = this.closest("oscd-shell").plugins.menu;
-    return menuPlugins.filter((plugin) => plugin.requireDoc !== true);
+  connectedCallback() {
+    super.connectedCallback();
+
+    this.shell.addEventListener("mict-plugins-updated", () => {
+      this.menuPlugins = this.shell.plugins.menu.filter(
+        (plugin) => plugin.requireDoc !== true,
+      );
+    });
   }
 
   render() {
@@ -28,7 +44,7 @@ export class MICTLandingPage extends LitElement {
           </div>
           <div class="landing-options">
             <p>Get started by choosing an option below:</p>
-            ${this.getMenuPlugins().map(
+            ${this.menuPlugins.map(
               (plugin) =>
                 html`<button @click=${() => this.handleMenuPluginClick(plugin)}>
                   <md-icon>${plugin.icon}</md-icon>
