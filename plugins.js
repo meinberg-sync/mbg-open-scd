@@ -20,6 +20,16 @@ export const plugins = {
       src: "plugins/oscd-save/oscd-save.js",
     },
     {
+      name: "Rename File",
+      translation: {
+        de: "Umbenennen",
+      },
+      icon: "drive_file_rename_outline",
+      active: true,
+      requireDoc: true,
+      tagName: "oscd-menu-file-rename",
+    },
+    {
       name: "Extract IED",
       translation: {
         de: "IED extrahieren",
@@ -82,16 +92,16 @@ export const plugins = {
       requireDoc: true,
       src: "plugins/oscd-communication/scl-communication.js",
     },
-    {
-      name: "Compare Files",
-      translations: {
-        de: "Dateien vergleichen",
-      },
-      icon: "compare",
-      requireDoc: true,
-      // tagName: "oscd-editor-diff",
-      src: "https://omicronenergyoss.github.io/oscd-editor-diff/oscd-editor-diff.js",
-    },
+    // {
+    //   name: "Compare Files",
+    //   translations: {
+    //     de: "Dateien vergleichen",
+    //   },
+    //   icon: "compare",
+    //   requireDoc: true,
+    //   tagName: "oscd-editor-diff",
+    //   src: "https://omicronenergyoss.github.io/oscd-editor-diff/oscd-editor-diff.js",
+    // },
     {
       name: "Source Editor",
       translations: {
@@ -107,8 +117,8 @@ export const plugins = {
       name: "Wizard Events Listener",
       icon: "none",
       requireDoc: true,
-      tagName: "oscd-background-wizard-events",
-      // src: "plugins/oscd-background-wizard-events/oscd-background-wizard-events.js",
+      // tagName: "oscd-background-wizard-events",
+      src: "plugins/oscd-background-wizard-events/oscd-background-wizard-events.js",
     },
     {
       name: "EditV1 Events Listener",
