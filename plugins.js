@@ -92,16 +92,15 @@ export const plugins = {
       requireDoc: true,
       src: "plugins/oscd-communication/scl-communication.js",
     },
-    // {
-    //   name: "Compare Files",
-    //   translations: {
-    //     de: "Dateien vergleichen",
-    //   },
-    //   icon: "compare",
-    //   requireDoc: true,
-    //   tagName: "oscd-editor-diff",
-    //   src: "https://omicronenergyoss.github.io/oscd-editor-diff/oscd-editor-diff.js",
-    // },
+    {
+      name: "Compare Files",
+      translations: {
+        de: "Dateien vergleichen",
+      },
+      icon: "compare",
+      requireDoc: true,
+      tagName: "oscd-editor-diff",
+    },
     {
       name: "Source Editor",
       translations: {
@@ -117,8 +116,7 @@ export const plugins = {
       name: "Wizard Events Listener",
       icon: "none",
       requireDoc: true,
-      // tagName: "oscd-background-wizard-events",
-      src: "plugins/oscd-background-wizard-events/oscd-background-wizard-events.js",
+      tagName: "oscd-background-wizard-events",
     },
     {
       name: "EditV1 Events Listener",
