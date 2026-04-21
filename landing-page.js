@@ -39,7 +39,7 @@ export class MICTLandingPage extends LitElement {
       <div class="landing-page-container">
         <div class="landing-interface">
           <div class="landing-header">
-            <img src="./assets/meinberg.png" alt="Meinberg Logo" width="150" />
+            <img src="./assets/meinberg_brand.png" alt="Meinberg Logo" width="150" />
             <h2>IED Configuration Tool</h2>
           </div>
           <div class="landing-options">
