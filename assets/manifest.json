@@ -1,7 +1,7 @@
 {
 	"name": "Meinberg ICT",
-	"description": "Meinberg IED Configuration Tool based on OpenSCD",
-	"short_name": "MBG ICT",
+	"description": "Meinberg's IED Configuration Tool based on OpenSCD",
+	"short_name": "MICT",
 	"start_url": "/",
 	"lang": "en-US",
 	"theme_color": "#0A5FB3",
