@@ -39,7 +39,18 @@ export class MICTLandingPage extends LitElement {
       <div class="landing-page-container">
         <div class="landing-interface">
           <div class="landing-header">
-            <img src="./assets/meinberg_brand.png" alt="Meinberg Logo" width="150" />
+            <div class="logo-wrapper">
+              <img
+                class="light-logo"
+                src="./assets/meinberg_claim_dark.png"
+                alt="Meinberg Logo"
+              />
+              <img
+                class="dark-logo"
+                src="./assets/meinberg_claim_light.png"
+                alt="Meinberg Logo"
+              />
+            </div>
             <h2>IED Configuration Tool</h2>
           </div>
           <div class="landing-options">
@@ -58,6 +69,16 @@ export class MICTLandingPage extends LitElement {
             >
               <md-icon>tour</md-icon>
               Visit Us!
+            </a>
+          </div>
+          <div class="survey-container">
+            <a
+              href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=zQSZ1Z92aEOL0PX0NYk6ODB4ab91fo9LmoVMLFiqIpFUMkM2UFlJMjVZRk1MVEI0RURBWE1TU0FCTi4u"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <md-icon>feedback</md-icon>
+              Take our survey!
             </a>
           </div>
         </div>
@@ -87,7 +108,30 @@ export class MICTLandingPage extends LitElement {
       flex-direction: column;
     }
 
-    .landing-header {
+    .logo-wrapper {
+      position: relative;
+      width: 150px;
+      aspect-ratio: 3508 / 1115;
+    }
+
+    .logo-wrapper > img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      transition: opacity 0.3s;
+    }
+
+    .light-logo {
+      opacity: 1;
+    }
+
+    .dark-logo {
+      opacity: 0;
+    }
+
+    .landing-header,
+    .survey-container {
       display: flex;
       align-items: center;
       gap: 0.5rem;
@@ -138,10 +182,30 @@ export class MICTLandingPage extends LitElement {
       color: var(--oscd-theme-base3);
     }
 
+    .survey-container > a {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .survey-container > a:link,
+    .survey-container > a:visited {
+      color: var(--oscd-theme-primary);
+    }
+
     @media (prefers-color-scheme: dark) {
       .landing-interface {
         background-color: var(--mbg-primary-dark);
         color: var(--oscd-theme-primary);
+      }
+
+      .light-logo {
+        opacity: 0;
+      }
+
+      .dark-logo {
+        opacity: 1;
       }
 
       .landing-options > button,
