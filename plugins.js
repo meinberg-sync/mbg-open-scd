@@ -37,7 +37,7 @@ export const plugins = {
       icon: "content_cut",
       active: true,
       requireDoc: true,
-      src: "plugins/mbg-ied-extractor/mbg-icd-extractor.js",
+      src: "plugins/mbg-ied-extractor/mbg-ied-extractor.js",
     },
     {
       name: "Validating",
