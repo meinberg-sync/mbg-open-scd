@@ -28,9 +28,10 @@ export class MICTLandingPage extends LitElement {
     super.connectedCallback();
 
     this.shell.addEventListener("mict-plugins-updated", () => {
-      this.menuPlugins = this.shell.plugins.menu.filter(
-        (plugin) => plugin.requireDoc !== true,
-      );
+      const menu = this.shell._resolvedPlugins?.menu ?? this.shell.plugins.menu;
+      this.menuPlugins = menu
+        .flatMap((p) => (Array.isArray(p.plugins) ? p.plugins : [p]))
+        .filter((plugin) => plugin.requireDoc !== true);
     });
   }
 

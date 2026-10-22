@@ -1,54 +1,89 @@
+import "@webcomponents/scoped-custom-element-registry";
+import "@omicronenergy/oscd-shell/oscd-shell.js";
+
+import OscdMenuOpen from "@omicronenergy/oscd-menu-commons/oscd-menu-open.js";
+import OscdMenuSave from "@omicronenergy/oscd-menu-commons/oscd-menu-save.js";
+import OscdMenuFileRename from "@omicronenergy/oscd-menu-commons/oscd-menu-file-rename.js";
+import OscdMenuFileClose from "@omicronenergy/oscd-menu-commons/oscd-menu-file-close.js";
+
+import OscdEditorDiff from "@omicronenergy/oscd-editor-diff";
+import OscdEditorSource from "@omicronenergy/oscd-editor-source";
+import OscdEditorCommunication from "@omicronenergy/oscd-editor-communication/oscd-editor-communication.js";
+
+import OscdBackgroundEditV1 from "@omicronenergy/oscd-background-editv1";
+import OscdBackgroundWizardEvents from "@omicronenergy/oscd-background-wizard-events/oscd-background-wizard-events.js";
+
+import { MICTLandingPage } from "./landing-page.js";
+
 export const plugins = {
   menu: [
     {
-      name: "Open File",
+      name: "File Management",
       translation: {
-        de: "Öffnen",
+        de: "Dateiverwaltung",
       },
-      icon: "folder_open",
-      active: true,
-      src: "plugins/oscd-open/oscd-open.js",
-    },
-    {
-      name: "Save File",
-      translation: {
-        de: "Speichern",
-      },
-      icon: "save",
-      active: true,
-      requireDoc: true,
-      src: "plugins/oscd-save/oscd-save.js",
-    },
-    {
-      name: "Rename File",
-      translation: {
-        de: "Umbenennen",
-      },
-      icon: "drive_file_rename_outline",
-      active: true,
-      requireDoc: true,
-      tagName: "oscd-menu-file-rename",
+      icon: "folder",
+      plugins: [
+        {
+          name: "Open File",
+          translation: {
+            de: "Öffnen",
+          },
+          icon: "folder_open",
+          active: true,
+          tagName: "oscd-menu-open",
+        },
+        {
+          name: "Save File",
+          translation: {
+            de: "Speichern",
+          },
+          icon: "save",
+          active: true,
+          requireDoc: true,
+          tagName: "oscd-menu-save",
+        },
+        {
+          name: "Rename File",
+          translation: {
+            de: "Umbenennen",
+          },
+          icon: "drive_file_rename_outline",
+          active: true,
+          requireDoc: true,
+          tagName: "oscd-menu-file-rename",
+        },
+        {
+          name: "Close File",
+          translation: {
+            de: "Schließen",
+          },
+          icon: "tab_close",
+          active: true,
+          requireDoc: true,
+          tagName: "oscd-menu-file-close",
+        },
+      ]
     },
     {
       name: "Extract IED",
       translation: {
         de: "IED extrahieren",
       },
-      icon: "content_cut",
+      icon: "file_export",
       active: true,
       requireDoc: true,
       src: "plugins/mbg-ied-extractor/mbg-ied-extractor.js",
     },
     {
-      name: "Validating",
+      name: "Validate SCL",
       translation: {
-        de: "Validieren",
+        de: "SCL validieren",
       },
       icon: "rule_folder",
       active: true,
       requireDoc: true,
       src: "plugins/scl-validating/scl-validating.js",
-      TODO: "Implement as feature with better quality assurance; current version is in experimental phase",
     },
     {
       name: "Help",
@@ -67,7 +102,7 @@ export const plugins = {
       translations: {
         de: "IED Editor",
       },
-      icon: "edit",
+      icon: "developer_board",
       active: true,
       requireDoc: true,
       src: "plugins/mbg-ied-editor/mbg-ied-editor.js",
@@ -77,27 +112,34 @@ export const plugins = {
       translations: {
         de: "Publisher",
       },
-      icon: "publish",
+      icon: "dataset",
       active: true,
       requireDoc: true,
-      src: "plugins/oscd-publisher/oscd-publisher.js",
+      src: "https://omicronenergyoss.github.io/oscd-editor-publisher/oscd-editor-publisher.js",
     },
     {
       name: "Communication",
       translations: {
         de: "Kommunikation",
       },
-      icon: "settings_ethernet",
+      icon: "lan",
       active: true,
       requireDoc: true,
-      src: "plugins/oscd-communication/scl-communication.js",
+      tagName: "oscd-editor-communication",
+    },
+    {
+      name: "Cleanup",
+      translations: { de: "Bereinigung" },
+      icon: "cleaning_services",
+      requireDoc: true,
+      src: "https://openpowershift.github.io/oscd-editor-cleanup/oscd-editor-cleanup.js",
     },
     {
       name: "Compare Files",
       translations: {
         de: "Dateien vergleichen",
       },
-      icon: "compare",
+      icon: "difference",
       requireDoc: true,
       tagName: "oscd-editor-diff",
     },
@@ -125,4 +167,24 @@ export const plugins = {
       tagName: "oscd-background-editv1",
     },
   ],
+};
+
+export const loadPlugins = async (oscdShell) => {
+  const registry = oscdShell.registry;
+
+  registry.define("mict-landing-page", MICTLandingPage);
+
+  registry.define("oscd-menu-open", OscdMenuOpen);
+  registry.define("oscd-menu-save", OscdMenuSave);
+  registry.define("oscd-menu-file-rename", OscdMenuFileRename);
+  registry.define("oscd-menu-file-close", OscdMenuFileClose);
+
+  registry.define("oscd-background-editv1", OscdBackgroundEditV1);
+  registry.define("oscd-background-wizard-events", OscdBackgroundWizardEvents);
+
+  registry.define("oscd-editor-diff", OscdEditorDiff);
+  registry.define("oscd-editor-source", OscdEditorSource);
+  registry.define("oscd-editor-communication", OscdEditorCommunication);
+
+  oscdShell.plugins = plugins;
 };
