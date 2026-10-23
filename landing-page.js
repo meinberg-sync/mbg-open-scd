@@ -219,6 +219,7 @@ export class MICTLandingPage extends LitElement {
       .landing-options > button:hover,
       .landing-options > a:hover {
         background-color: var(--oscd-theme-primary);
+        color: var(--oscd-theme-base3);
       }
     }
 
