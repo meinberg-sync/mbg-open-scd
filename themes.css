@@ -1,4 +1,6 @@
-* {
+:root {
+  color-scheme: light dark;
+
   --oscd-theme-primary: var(--mbg-primary-medium);
   --oscd-theme-secondary: var(--mbg-primary-dark);
   --oscd-theme-error: var(--mbg-error-red);
@@ -15,14 +17,20 @@
   --oscd-theme-text-font: 'Roboto';
   --oscd-theme-icon-font: 'Material Symbols Outlined';
 
-  margin: 0px;
-  padding: 0px;
+  --mdc-switch-selected-track-color: var(--mbg-bg-primary-200);
+  --mdc-switch-selected-hover-track-color: var(--mbg-bg-primary-200);
+  --mdc-switch-selected-focus-track-color: var(--mbg-bg-primary-200);
+  --mdc-switch-selected-pressed-track-color: var(--mbg-bg-primary-200);
+  --mdc-switch-selected-hover-handle-color: var(--mbg-primary-dark);
+  --mdc-switch-selected-focus-handle-color: var(--mbg-primary-dark);
+  --mdc-switch-selected-pressed-handle-color: var(--mbg-primary-dark);
 }
 
 @media (prefers-color-scheme: dark) {
-  * {
-    --oscd-theme-primary: var(--mbg-bg-primary-400);
-    --oscd-theme-secondary: var(--mbg-blue-500);
+  :root {
+    --oscd-theme-primary: var(--mbg-bg-primary-300);
+    --oscd-theme-secondary: var(--mbg-bg-primary-400);
+    --oscd-theme-error: var(--mbg-error-red-light);
 
     --oscd-theme-base03: var(--mbg-blue-gray-50);
     --oscd-theme-base02: var(--mbg-blue-gray-100);
@@ -33,8 +41,46 @@
     --oscd-theme-base2: var(--mbg-blue-gray-800);
     --oscd-theme-base3: var(--mbg-blue-gray-900);
 
-    --mdc-theme-text-disabled-on-light: rgba(255, 255, 255, 0.38);
+    --oscd-app-bar-background-color: var(--mbg-blue-800);
+    --oscd-app-bar-color: var(--mbg-blue-gray-200);
+    --oscd-shell-app-bar-background-color: var(--mbg-blue-800);
+    --oscd-shell-app-bar-color: var(--mbg-blue-gray-200);
+    --oscd-shell-app-bar-action-icon-color: var(--mbg-blue-gray-200);
+    --oscd-shell-file-menu-text-color: var(--mbg-blue-gray-200);
+    --oscd-shell-plugins-menu-button-color: var(--mbg-blue-gray-200);
+    --oscd-shell-plugins-menu-container-color: var(--mbg-blue-gray-800);
+
+    --mdc-theme-text-hint-on-background: var(--mbg-blue-gray-400);
+    --mdc-dialog-content-ink-color: var(--mbg-blue-gray-300);
+    --mdc-checkbox-unchecked-color: var(--mbg-blue-gray-300);
+    --mdc-radio-unchecked-color: var(--mbg-blue-gray-300);
+    --mdc-checkbox-disabled-color: rgba(255, 255, 255, 0.38);
+    --mdc-radio-disabled-color: rgba(255, 255, 255, 0.38);
+    --mdc-text-field-disabled-ink-color: rgba(255, 255, 255, 0.38);
+    --mdc-button-outline-color: var(--mbg-blue-gray-500);
+    --mdc-dialog-scroll-divider-color: rgba(255, 255, 255, 0.12);
+
+    --mdc-switch-unselected-track-color: var(--mbg-blue-gray-700);
+    --mdc-switch-unselected-hover-track-color: var(--mbg-blue-gray-700);
+    --mdc-switch-unselected-focus-track-color: var(--mbg-blue-gray-700);
+    --mdc-switch-unselected-pressed-track-color: var(--mbg-blue-gray-700);
+    --mdc-switch-unselected-handle-color: var(--mbg-blue-gray-400);
+    --mdc-switch-unselected-hover-handle-color: var(--mbg-blue-gray-300);
+    --mdc-switch-unselected-focus-handle-color: var(--mbg-blue-gray-300);
+    --mdc-switch-unselected-pressed-handle-color: var(--mbg-blue-gray-300);
+    --mdc-switch-selected-track-color: var(--mbg-bg-primary-600);
+    --mdc-switch-selected-hover-track-color: var(--mbg-bg-primary-600);
+    --mdc-switch-selected-focus-track-color: var(--mbg-bg-primary-600);
+    --mdc-switch-selected-pressed-track-color: var(--mbg-bg-primary-600);
+    --mdc-switch-selected-hover-handle-color: var(--mbg-bg-primary-200);
+    --mdc-switch-selected-focus-handle-color: var(--mbg-bg-primary-200);
+    --mdc-switch-selected-pressed-handle-color: var(--mbg-bg-primary-200);
   }
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
 abbr {

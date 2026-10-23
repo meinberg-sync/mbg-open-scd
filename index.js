@@ -2,6 +2,7 @@ import '@webcomponents/scoped-custom-element-registry';
 import '@omicronenergy/oscd-shell/oscd-shell.js';
 
 import { loadPlugins } from './plugins.js';
+import { styleShell } from './style.js';
 
 const _customElementsDefine = window.customElements.define;
 window.customElements.define = (name, cl, conf) => {
@@ -26,6 +27,8 @@ try {
 } catch (e) {
   console.error("Error loading plugins:", e);
 }
+
+await styleShell(oscdShell);
 
 oscdShell.dispatchEvent(
   new CustomEvent("mict-plugins-updated", {
