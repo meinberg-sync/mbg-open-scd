@@ -1,0 +1,59 @@
+body {
+  background: linear-gradient(325deg,
+    var(--mbg-bg-primary-300),
+    var(--mbg-open-scd-blue),
+    var(--mbg-primary-light),
+    var(--mbg-blue-300),
+    var(--mbg-blue-700));
+  background-size: 300% 300%;
+  width: 100%;
+  height: 100%;
+  animation: 20s infinite gradient-animation;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(325deg,
+      var(--mbg-bg-primary-200),
+      var(--mbg-bg-primary-300),
+      var(--mbg-bg-primary-500));
+    background-size: 300% 300%;
+    animation: 20s infinite gradient-animation;
+  }
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0%;
+  }
+
+  50% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: 0%;
+  }
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.material-symbols-outlined {
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  direction: ltr;
+  font-family: Material Symbols Outlined;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  display: inline-block;
+}

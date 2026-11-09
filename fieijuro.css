@@ -1,0 +1,48 @@
+@font-face {
+  font-family: Material Symbols Outlined;
+  font-style: normal;
+  font-weight: 400;
+  src: url("DNm9vQRx.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  src: local(""), url("jMPKAg9b.woff2") format("woff2"), url("lRRuIfal.woff") format("woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 300;
+  src: local(""), url("Dz6fe80q.woff2") format("woff2"), url("DIKpjN4d.woff") format("woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("B9sa-tgs.woff2") format("woff2"), url("BZJ9QssU.woff") format("woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 400;
+  src: local(""), url("Cq7rfnA4.woff2") format("woff2"), url("IcrOe8q0.woff") format("woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 500;
+  src: local(""), url("Eq3J5Wko.woff2") format("woff2"), url("DzbMd8Hk.woff") format("woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("6BIylKNo.woff2") format("woff2"), url("B0NPRryQ.woff") format("woff");
+}
