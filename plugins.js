@@ -29,6 +29,8 @@ export const plugins = {
           translation: {
             de: "Öffnen",
           },
+          description:
+            "Accepts .icd, .cid, .iid, .scd, .ssd, and .sed",
           icon: "folder_open",
           active: true,
           tagName: "oscd-menu-open",
@@ -63,7 +65,7 @@ export const plugins = {
           requireDoc: true,
           tagName: "oscd-menu-file-close",
         },
-      ]
+      ],
     },
     {
       name: "Extract IED",
@@ -90,6 +92,7 @@ export const plugins = {
       translation: {
         de: "Hilfe",
       },
+      description: "Explains how to use Meinberg ICT",
       icon: "help",
       active: true,
       requireDoc: false,

@@ -1,4 +1,4 @@
-import { LitElement, html, css } from 'lit';
+import { LitElement, html, css, nothing } from 'lit';
 
 export class MICTLandingPage extends LitElement {
   shell = this.closest("oscd-shell");
@@ -60,7 +60,14 @@ export class MICTLandingPage extends LitElement {
               (plugin) =>
                 html`<button @click=${() => this.handleMenuPluginClick(plugin)}>
                   <md-icon>${plugin.icon}</md-icon>
-                  ${plugin.name}
+                  <span class="option-text">
+                    <span class="option-label">${plugin.name}</span>
+                    ${plugin.description
+                      ? html`<span class="option-description"
+                          >${plugin.description}</span
+                        >`
+                      : nothing}
+                  </span>
                 </button>`,
             )}
             <a
@@ -69,7 +76,12 @@ export class MICTLandingPage extends LitElement {
               rel="noopener noreferrer"
             >
               <md-icon>tour</md-icon>
-              Visit Us!
+              <span class="option-text">
+                <span class="option-label">Explore Meinberg!</span>
+                <span class="option-description"
+                  >Opens a new tab to meinbergglobal.com</span
+                >
+              </span>
             </a>
           </div>
           <div class="survey-container">
@@ -79,12 +91,12 @@ export class MICTLandingPage extends LitElement {
               rel="noopener noreferrer"
             >
               <md-icon>feedback</md-icon>
-              Take our survey!
+              Share Your Feedback!
             </a>
           </div>
         </div>
         <div class="landing-background">
-          <div>
+          <div class="landing-oscd-logo">
             Powered by
             <img src="./assets/oscd-logo.jpeg" alt="OpenSCD Logo" width="100" />
           </div>
@@ -99,14 +111,28 @@ export class MICTLandingPage extends LitElement {
       color: var(--oscd-theme-primary);
       font-weight: 300;
       display: flex;
+      position: relative;
     }
 
     .landing-interface {
       height: 100vh;
       width: 66%;
+      min-width: 380px;
       background-color: white;
       display: flex;
       flex-direction: column;
+    }
+
+    @media (max-width: 515px) {
+      .landing-interface {
+        min-width: 100%;
+      }
+    }
+
+    @media (max-width: 360px) {
+      :host > .landing-page-container {
+        min-width: 360px;
+      }
     }
 
     .logo-wrapper {
@@ -155,32 +181,82 @@ export class MICTLandingPage extends LitElement {
 
     .landing-options > button,
     .landing-options > a {
+      --label-offset: 0.65rem;
+
+      font: inherit;
+      font-size: 20px;
+      font-weight: 400;
+      text-align: start;
+
       display: flex;
       align-items: center;
+      width: inherit;
+      cursor: pointer;
       gap: 0.5rem;
       padding: 2rem 1rem;
-      font-size: 20px;
-      text-align: start;
-      cursor: pointer;
-      width: inherit;
       border-radius: 8px;
+
       color: var(--oscd-theme-secondary);
       border: 1px solid var(--oscd-theme-base3);
       background-color: var(--oscd-theme-base3);
       transition:
         background-color 0.3s,
+        color 0.3s,
         box-shadow 0.3s;
     }
 
     .landing-options > a {
       text-decoration: none;
-      font-weight: 400;
     }
 
     .landing-options > button:hover,
     .landing-options > a:hover {
       background-color: var(--oscd-theme-secondary);
       color: var(--oscd-theme-base3);
+    }
+
+    .option-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .option-label {
+      transform: translateY(var(--label-offset));
+      transition: transform 0.3s ease;
+    }
+
+    .option-description {
+      font-size: 14px;
+      font-weight: 300;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .landing-options > :is(button, a):is(:hover, :focus-visible) .option-label {
+      transform: translateY(0);
+    }
+
+    .landing-options
+      > :is(button, a):is(:hover, :focus-visible)
+      .option-description {
+      opacity: 0.85;
+    }
+
+    @media (max-width: 376px) {
+      .option-description {
+        display: none;
+      }
+
+      .option-label {
+        transform: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .option-label {
+        transition: none;
+      }
     }
 
     .survey-container > a {
@@ -238,7 +314,7 @@ export class MICTLandingPage extends LitElement {
       animation: gradient-animation 20s ease infinite;
     }
 
-    .landing-background > div {
+    .landing-oscd-logo {
       color: white;
       display: flex;
       position: absolute;
@@ -248,7 +324,7 @@ export class MICTLandingPage extends LitElement {
       gap: 0.25rem;
     }
 
-    .landing-background img {
+    .landing-oscd-logo img {
       border-radius: 5px;
     }
 
