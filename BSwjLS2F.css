@@ -11,8 +11,8 @@ body {
   animation: 20s infinite gradient-animation;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
+:root[data-theme="dark"] {
+  & body {
     background: linear-gradient(325deg,
       var(--mbg-bg-primary-200),
       var(--mbg-bg-primary-300),
@@ -56,4 +56,16 @@ html {
   font-weight: normal;
   line-height: 1;
   display: inline-block;
+}
+
+.hidden-header {
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
 }

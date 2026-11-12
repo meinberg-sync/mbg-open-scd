@@ -13,7 +13,7 @@ body {
   animation: gradient-animation 20s ease infinite;
 }
 
-@media (prefers-color-scheme: dark) {
+:root[data-theme="dark"] {
   body {
     background: linear-gradient(
       325deg,
@@ -58,4 +58,14 @@ html {
   font-feature-settings: "liga";
   -webkit-font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
+}
+
+.hidden-header {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }

@@ -1,0 +1,95 @@
+:root {
+  color-scheme: light;
+  --oscd-theme-primary: var(--mbg-primary-medium);
+  --oscd-theme-secondary: var(--mbg-primary-dark);
+  --oscd-theme-error: var(--mbg-error-red);
+  --oscd-theme-base03: var(--mbg-blue-gray-900);
+  --oscd-theme-base02: var(--mbg-blue-gray-800);
+  --oscd-theme-base01: var(--mbg-blue-gray-700);
+  --oscd-theme-base00: var(--mbg-blue-gray-600);
+  --oscd-theme-base0: var(--mbg-blue-gray-400);
+  --oscd-theme-base1: var(--mbg-blue-gray-300);
+  --oscd-theme-base2: var(--mbg-blue-gray-200);
+  --oscd-theme-base3: var(--mbg-blue-gray-50);
+  --oscd-theme-text-font: "Roboto";
+  --oscd-theme-icon-font: "Material Symbols Outlined";
+  --mbg-landing-logo-light: 1;
+  --mbg-landing-logo-dark: 0;
+  --mbg-landing-bg: white;
+  --mbg-landing-option-bg: var(--oscd-theme-base3);
+  --mbg-landing-option-bg-hover: var(--oscd-theme-secondary);
+  --mbg-landing-option-text: var(--oscd-theme-secondary);
+  --mbg-landing-option-text-hover: var(--oscd-theme-base3);
+  --mdc-switch-selected-track-color: var(--mbg-bg-primary-200);
+  --mdc-switch-selected-hover-track-color: var(--mbg-bg-primary-200);
+  --mdc-switch-selected-focus-track-color: var(--mbg-bg-primary-200);
+  --mdc-switch-selected-pressed-track-color: var(--mbg-bg-primary-200);
+  --mdc-switch-selected-hover-handle-color: var(--mbg-primary-dark);
+  --mdc-switch-selected-focus-handle-color: var(--mbg-primary-dark);
+  --mdc-switch-selected-pressed-handle-color: var(--mbg-primary-dark);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --oscd-theme-primary: var(--mbg-bg-primary-300);
+  --oscd-theme-secondary: var(--mbg-bg-primary-400);
+  --oscd-theme-error: var(--mbg-error-red-light);
+  --oscd-theme-base03: var(--mbg-blue-gray-50);
+  --oscd-theme-base02: var(--mbg-blue-gray-100);
+  --oscd-theme-base01: var(--mbg-blue-gray-200);
+  --oscd-theme-base00: var(--mbg-blue-gray-300);
+  --oscd-theme-base0: var(--mbg-blue-gray-400);
+  --oscd-theme-base1: var(--mbg-blue-gray-500);
+  --oscd-theme-base2: var(--mbg-blue-gray-800);
+  --oscd-theme-base3: var(--mbg-blue-gray-900);
+  --mbg-landing-logo-light: 0;
+  --mbg-landing-logo-dark: 1;
+  --mbg-landing-bg: var(--mbg-primary-dark);
+  --mbg-landing-option-bg: var(--mbg-bg-primary-700);
+  --mbg-landing-option-bg-hover: var(--oscd-theme-primary);
+  --mbg-landing-option-text: var(--oscd-theme-base02);
+  --mbg-landing-option-text-hover: var(--oscd-theme-base3);
+  --mbg-disabled-label-color: var(--mbg-blue-gray-400);
+  --oscd-app-bar-background-color: var(--mbg-blue-800);
+  --oscd-app-bar-color: var(--mbg-blue-gray-200);
+  --oscd-shell-app-bar-background-color: var(--mbg-blue-800);
+  --oscd-shell-app-bar-color: var(--mbg-blue-gray-200);
+  --oscd-shell-app-bar-action-icon-color: var(--mbg-blue-gray-200);
+  --oscd-shell-file-menu-text-color: var(--mbg-blue-gray-200);
+  --oscd-shell-plugins-menu-button-color: var(--mbg-blue-gray-200);
+  --oscd-shell-plugins-menu-container-color: var(--mbg-blue-gray-800);
+  --mdc-theme-text-hint-on-background: var(--mbg-blue-gray-400);
+  --mdc-dialog-content-ink-color: var(--mbg-blue-gray-300);
+  --mdc-checkbox-unchecked-color: var(--mbg-blue-gray-300);
+  --mdc-radio-unchecked-color: var(--mbg-blue-gray-300);
+  --mdc-checkbox-disabled-color: #ffffff61;
+  --mdc-radio-disabled-color: #ffffff61;
+  --mdc-text-field-disabled-ink-color: #ffffff61;
+  --mdc-button-outline-color: var(--mbg-blue-gray-500);
+  --mdc-dialog-scroll-divider-color: #ffffff1f;
+  --mdc-switch-unselected-track-color: var(--mbg-blue-gray-700);
+  --mdc-switch-unselected-hover-track-color: var(--mbg-blue-gray-700);
+  --mdc-switch-unselected-focus-track-color: var(--mbg-blue-gray-700);
+  --mdc-switch-unselected-pressed-track-color: var(--mbg-blue-gray-700);
+  --mdc-switch-unselected-handle-color: var(--mbg-blue-gray-400);
+  --mdc-switch-unselected-hover-handle-color: var(--mbg-blue-gray-300);
+  --mdc-switch-unselected-focus-handle-color: var(--mbg-blue-gray-300);
+  --mdc-switch-unselected-pressed-handle-color: var(--mbg-blue-gray-300);
+  --mdc-switch-selected-track-color: var(--mbg-bg-primary-600);
+  --mdc-switch-selected-hover-track-color: var(--mbg-bg-primary-600);
+  --mdc-switch-selected-focus-track-color: var(--mbg-bg-primary-600);
+  --mdc-switch-selected-pressed-track-color: var(--mbg-bg-primary-600);
+  --mdc-switch-selected-hover-handle-color: var(--mbg-bg-primary-200);
+  --mdc-switch-selected-focus-handle-color: var(--mbg-bg-primary-200);
+  --mdc-switch-selected-pressed-handle-color: var(--mbg-bg-primary-200);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+abbr {
+  border-bottom: none;
+  text-decoration: none;
+}

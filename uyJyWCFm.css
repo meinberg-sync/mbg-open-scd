@@ -1,0 +1,39 @@
+:root[data-theme="dark"] #ace_settingsmenu, :root[data-theme="dark"] #kbshortcutmenu {
+  background-color: var(--mbg-blue-gray-800);
+  color: var(--mbg-blue-gray-200);
+  box-shadow: -5px 4px 5px #00000080;
+}
+
+:root[data-theme="dark"] .ace_optionsMenuEntry:hover {
+  background-color: #ffffff0f;
+}
+
+:root[data-theme="dark"] .ace_optionsMenuKey {
+  color: var(--mbg-bg-primary-300);
+}
+
+:root[data-theme="dark"] .ace_optionsMenuCommand {
+  color: var(--mbg-blue-gray-300);
+}
+
+:root[data-theme="dark"] .ace_optionsMenuEntry button {
+  background: var(--mbg-blue-gray-700);
+  color: var(--mbg-blue-gray-200);
+  border-color: var(--mbg-blue-gray-500);
+}
+
+:root[data-theme="dark"] .ace_optionsMenuEntry button:hover {
+  background: var(--mbg-blue-gray-600);
+}
+
+:root[data-theme="dark"] .ace_optionsMenuEntry button[ace_selected_button="true"] {
+  background: var(--mbg-blue-gray-900);
+  border-color: var(--mbg-blue-gray-400);
+  box-shadow: inset 1px 0 2px #0009;
+}
+
+:root[data-theme="dark"] #ace_settingsmenu input, :root[data-theme="dark"] #ace_settingsmenu select {
+  background-color: var(--mbg-blue-gray-900);
+  color: var(--mbg-blue-gray-200);
+  border: 1px solid var(--mbg-blue-gray-500);
+}
