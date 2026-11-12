@@ -3,6 +3,7 @@ import '@omicronenergy/oscd-shell/oscd-shell.js';
 
 import { loadPlugins } from './plugins.js';
 import { styleShell } from './style.js';
+import { initSettings } from './settings.js';
 
 const _customElementsDefine = window.customElements.define;
 window.customElements.define = (name, cl, conf) => {
@@ -16,6 +17,7 @@ window.customElements.define = (name, cl, conf) => {
 };
 
 const oscdShell = document.querySelector('oscd-shell');
+initSettings(oscdShell);
 
 const params = (new URL(document.location)).searchParams;
 for (const [name, value] of params) {

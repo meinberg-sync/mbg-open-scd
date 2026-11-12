@@ -118,7 +118,7 @@ export class MICTLandingPage extends LitElement {
       height: 100vh;
       width: 66%;
       min-width: 380px;
-      background-color: white;
+      background-color: var(--mbg-landing-bg);
       display: flex;
       flex-direction: column;
     }
@@ -150,11 +150,11 @@ export class MICTLandingPage extends LitElement {
     }
 
     .light-logo {
-      opacity: 1;
+      opacity: var(--mbg-landing-logo-light);
     }
 
     .dark-logo {
-      opacity: 0;
+      opacity: var(--mbg-landing-logo-dark);
     }
 
     .landing-header,
@@ -196,9 +196,9 @@ export class MICTLandingPage extends LitElement {
       padding: 2rem 1rem;
       border-radius: 8px;
 
-      color: var(--oscd-theme-secondary);
-      border: 1px solid var(--oscd-theme-base3);
-      background-color: var(--oscd-theme-base3);
+      color: var(--mbg-landing-option-text);
+      border: 1px solid var(--mbg-landing-option-bg);
+      background-color: var(--mbg-landing-option-bg);
       transition:
         background-color 0.3s,
         color 0.3s,
@@ -211,8 +211,8 @@ export class MICTLandingPage extends LitElement {
 
     .landing-options > button:hover,
     .landing-options > a:hover {
-      background-color: var(--oscd-theme-secondary);
-      color: var(--oscd-theme-base3);
+      background-color: var(--mbg-landing-option-bg-hover);
+      color: var(--mbg-landing-option-text-hover);
     }
 
     .option-text {
@@ -269,34 +269,6 @@ export class MICTLandingPage extends LitElement {
     .survey-container > a:link,
     .survey-container > a:visited {
       color: var(--oscd-theme-primary);
-    }
-
-    @media (prefers-color-scheme: dark) {
-      .landing-interface {
-        background-color: var(--mbg-primary-dark);
-        color: var(--oscd-theme-primary);
-      }
-
-      .light-logo {
-        opacity: 0;
-      }
-
-      .dark-logo {
-        opacity: 1;
-      }
-
-      .landing-options > button,
-      .landing-options > a {
-        color: var(--oscd-theme-base02);
-        background-color: var(--mbg-bg-primary-700);
-        border: 1px solid var(--mbg-bg-primary-700);
-      }
-
-      .landing-options > button:hover,
-      .landing-options > a:hover {
-        background-color: var(--oscd-theme-primary);
-        color: var(--oscd-theme-base3);
-      }
     }
 
     .landing-background {

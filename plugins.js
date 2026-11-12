@@ -14,6 +14,7 @@ import OscdBackgroundEditV1 from "@omicronenergy/oscd-background-editv1";
 import OscdBackgroundWizardEvents from "@omicronenergy/oscd-background-wizard-events/oscd-background-wizard-events.js";
 
 import { MICTLandingPage } from "./landing-page.js";
+import { MbgThemeToggle } from "./settings.js";
 
 export const plugins = {
   menu: [
@@ -29,8 +30,7 @@ export const plugins = {
           translation: {
             de: "Öffnen",
           },
-          description:
-            "Accepts .icd, .cid, .iid, .scd, .ssd, and .sed",
+          description: "Accepts .icd, .cid, .iid, .scd, .ssd, and .sed",
           icon: "folder_open",
           active: true,
           tagName: "oscd-menu-open",
@@ -97,6 +97,16 @@ export const plugins = {
       active: true,
       requireDoc: false,
       src: "plugins/mbg-ict-help/mbg-ict-help.js",
+    },
+    {
+      name: "Toggle Theme",
+      translation: {
+        de: "Dunkelmodus umschalten",
+      },
+      description: "Toggle between light and dark mode",
+      icon: "contrast",
+      active: true,
+      tagName: "mbg-theme-toggle",
     },
   ],
   editor: [
@@ -181,6 +191,7 @@ export const loadPlugins = async (oscdShell) => {
   registry.define("oscd-menu-save", OscdMenuSave);
   registry.define("oscd-menu-file-rename", OscdMenuFileRename);
   registry.define("oscd-menu-file-close", OscdMenuFileClose);
+  registry.define("mbg-theme-toggle", MbgThemeToggle);
 
   registry.define("oscd-background-editv1", OscdBackgroundEditV1);
   registry.define("oscd-background-wizard-events", OscdBackgroundWizardEvents);

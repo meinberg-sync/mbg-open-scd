@@ -13,7 +13,7 @@ body {
   animation: gradient-animation 20s ease infinite;
 }
 
-@media (prefers-color-scheme: dark) {
+:root[data-theme="dark"] {
   body {
     background: linear-gradient(
       325deg,
