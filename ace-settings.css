@@ -1,41 +1,145 @@
-:root[data-theme="dark"] #ace_settingsmenu,
-:root[data-theme="dark"] #kbshortcutmenu {
-  background-color: var(--mbg-blue-gray-800);
-  color: var(--mbg-blue-gray-200);
-  box-shadow: -5px 4px 5px rgba(0, 0, 0, 0.5);
+:root #ace_settingsmenu,
+:root #kbshortcutmenu {
+  --ace-panel-bg: var(--oscd-theme-base3);
+  --ace-panel-text: var(--oscd-theme-base01);
+  --ace-panel-muted: var(--oscd-theme-base0);
+  --ace-panel-divider: var(--oscd-theme-base2);
+  --ace-panel-control-border: var(--oscd-theme-base1);
+  --ace-panel-accent: var(--oscd-theme-primary);
+
+  box-sizing: border-box;
+  width: min(400px, 100vw);
+  padding: 16px 16px 24px;
+  background-color: var(--ace-panel-bg);
+  color: var(--ace-panel-text);
+  font: 14px var(--oscd-theme-text-font), sans-serif;
+  border-left: 1px solid var(--ace-panel-divider);
+  box-shadow: -4px 0 16px rgba(0, 0, 0, 0.2);
 }
 
-:root[data-theme="dark"] .ace_optionsMenuEntry:hover {
-  background-color: rgba(255, 255, 255, 0.06);
+:root #ace_settingsmenu table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-:root[data-theme="dark"] .ace_optionsMenuKey {
-  color: var(--mbg-bg-primary-300);
+:root #ace_settingsmenu td {
+  height: 28px;
+  padding: 4px 0;
+  vertical-align: middle;
 }
 
-:root[data-theme="dark"] .ace_optionsMenuCommand {
-  color: var(--mbg-blue-gray-300);
+:root #ace_settingsmenu td:has(> #more-controls) {
+  padding-top: 12px;
+  border-top: 1px solid var(--ace-panel-divider);
 }
 
-:root[data-theme="dark"] .ace_optionsMenuEntry button {
-  background: var(--mbg-blue-gray-700);
-  color: var(--mbg-blue-gray-200);
-  border-color: var(--mbg-blue-gray-500);
+:root #ace_settingsmenu [role="group"] {
+  display: inline-flex;
+  vertical-align: middle;
+  border: 1px solid var(--ace-panel-control-border);
+  border-radius: 4px;
+  overflow: hidden;
 }
 
-:root[data-theme="dark"] .ace_optionsMenuEntry button:hover {
-  background: var(--mbg-blue-gray-600);
+:root #ace_settingsmenu [role="group"] button {
+  height: 26px;
+  padding: 0 7px;
 }
 
-:root[data-theme="dark"] .ace_optionsMenuEntry button[ace_selected_button="true"] {
-  background: var(--mbg-blue-gray-900);
-  border-color: var(--mbg-blue-gray-400);
-  box-shadow: inset 1px 0 2px 0 rgba(0, 0, 0, 0.6);
+:root #ace_settingsmenu [role="group"] button + button {
+  border-left: 1px solid var(--ace-panel-control-border);
 }
 
-:root[data-theme="dark"] #ace_settingsmenu input,
-:root[data-theme="dark"] #ace_settingsmenu select {
-  background-color: var(--mbg-blue-gray-900);
-  color: var(--mbg-blue-gray-200);
-  border: 1px solid var(--mbg-blue-gray-500);
+:root #ace_settingsmenu .ace_optionsMenuEntry:hover {
+  background-color: color-mix(in srgb, var(--ace-panel-accent) 8%, transparent);
+}
+
+:root #ace_settingsmenu .ace_optionsMenuEntry > td:first-child {
+  padding-right: 12px;
+  white-space: nowrap;
+}
+
+:root #ace_settingsmenu .ace_optionsMenuEntry > td:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+:root #ace_settingsmenu .ace_optionsMenuEntry td > button {
+  margin-left: 4px;
+  border: 1px solid var(--ace-panel-control-border);
+  border-radius: 4px;
+}
+
+:root #ace_settingsmenu .ace_optionsMenuEntry button {
+  height: 28px;
+  padding: 0 8px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+:root #ace_settingsmenu .ace_optionsMenuEntry button:hover {
+  background: color-mix(in srgb, var(--ace-panel-accent) 14%, transparent);
+}
+
+:root #ace_settingsmenu .ace_optionsMenuEntry button[ace_selected_button="true"] {
+  background: var(--ace-panel-accent);
+  color: var(--ace-panel-bg);
+}
+
+:root #ace_settingsmenu select,
+:root #ace_settingsmenu input[type="number"] {
+  box-sizing: border-box;
+  height: 28px;
+  padding: 0 8px;
+  border: 1px solid var(--ace-panel-control-border);
+  border-radius: 4px;
+  background-color: var(--ace-panel-bg);
+  color: var(--ace-panel-text);
+  font: inherit;
+}
+
+:root #ace_settingsmenu select {
+  width: 180px;
+}
+
+:root #ace_settingsmenu input[type="number"] {
+  width: 5em !important; /* Ace sets width: 3em inline */
+}
+
+:root #ace_settingsmenu input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0 0 0 8px;
+  accent-color: var(--ace-panel-accent);
+  vertical-align: middle;
+}
+
+:root #ace_settingsmenu input[type="checkbox"] + input[type="number"] {
+  margin-left: 8px;
+}
+
+:root #ace_settingsmenu :is(button, select, input):focus-visible {
+  outline: 2px solid var(--ace-panel-accent);
+  outline-offset: -2px;
+}
+
+:root #kbshortcutmenu .ace_optionsMenuKey {
+  color: var(--ace-panel-accent);
+}
+
+:root #kbshortcutmenu .ace_optionsMenuCommand {
+  color: var(--ace-panel-muted);
+}
+
+/* Version footer */
+:root #ace_settingsmenu #controls > tr:last-child > td,
+:root #ace_settingsmenu #controls > tbody > tr:last-child > td {
+  padding-top: 16px;
+  font-size: 12px;
+  color: var(--ace-panel-muted);
 }
