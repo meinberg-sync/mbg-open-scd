@@ -5,6 +5,16 @@ shellSheet.replaceSync(`
   [slot='alignEnd'] oscd-filled-icon-button {
     --md-filled-icon-button-container-color: transparent;
   }
+
+  #menu-button oscd-icon {
+    font-size: 0;
+  }
+
+  /* Override plugin default icon with "menu" icon */
+  #menu-button oscd-icon::before {
+    content: "menu";
+    font-size: var(--_icon-size);
+  }
 `);
 
 const adoptSheet = (root, sheet) => {
