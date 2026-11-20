@@ -1,0 +1,140 @@
+:root #ace_settingsmenu, :root #kbshortcutmenu {
+  --ace-panel-bg: var(--oscd-theme-base3);
+  --ace-panel-text: var(--oscd-theme-base01);
+  --ace-panel-muted: var(--oscd-theme-base0);
+  --ace-panel-divider: var(--oscd-theme-base2);
+  --ace-panel-control-border: var(--oscd-theme-base1);
+  --ace-panel-accent: var(--oscd-theme-primary);
+  box-sizing: border-box;
+  background-color: var(--ace-panel-bg);
+  width: min(400px, 100vw);
+  color: var(--ace-panel-text);
+  font: 14px var(--oscd-theme-text-font), sans-serif;
+  border-left: 1px solid var(--ace-panel-divider);
+  padding: 16px 16px 24px;
+  box-shadow: -4px 0 16px #0003;
+}
+
+:root #ace_settingsmenu table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+:root #ace_settingsmenu td {
+  vertical-align: middle;
+  height: 28px;
+  padding: 4px 0;
+}
+
+:root #ace_settingsmenu td:has( > #more-controls) {
+  border-top: 1px solid var(--ace-panel-divider);
+  padding-top: 12px;
+}
+
+:root #ace_settingsmenu [role="group"] {
+  vertical-align: middle;
+  border: 1px solid var(--ace-panel-control-border);
+  border-radius: 4px;
+  display: inline-flex;
+  overflow: hidden;
+}
+
+:root #ace_settingsmenu [role="group"] button {
+  height: 26px;
+  padding: 0 7px;
+}
+
+:root #ace_settingsmenu [role="group"] button + button {
+  border-left: 1px solid var(--ace-panel-control-border);
+}
+
+:root #ace_settingsmenu .ace_optionsMenuEntry:hover {
+  background-color: color-mix(in srgb, var(--ace-panel-accent) 8%, transparent);
+}
+
+:root #ace_settingsmenu .ace_optionsMenuEntry > td:first-child {
+  white-space: nowrap;
+  padding-right: 12px;
+}
+
+:root #ace_settingsmenu .ace_optionsMenuEntry > td:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+:root #ace_settingsmenu .ace_optionsMenuEntry td > button {
+  border: 1px solid var(--ace-panel-control-border);
+  border-radius: 4px;
+  margin-left: 4px;
+}
+
+:root #ace_settingsmenu .ace_optionsMenuEntry button {
+  height: 28px;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  box-shadow: none;
+  background: none;
+  border: 0;
+  padding: 0 8px;
+  font-size: 13px;
+}
+
+:root #ace_settingsmenu .ace_optionsMenuEntry button:hover {
+  background: color-mix(in srgb, var(--ace-panel-accent) 14%, transparent);
+}
+
+:root #ace_settingsmenu .ace_optionsMenuEntry button[ace_selected_button="true"] {
+  background: var(--ace-panel-accent);
+  color: var(--ace-panel-bg);
+}
+
+:root #ace_settingsmenu select, :root #ace_settingsmenu input[type="number"] {
+  box-sizing: border-box;
+  border: 1px solid var(--ace-panel-control-border);
+  background-color: var(--ace-panel-bg);
+  height: 28px;
+  color: var(--ace-panel-text);
+  font: inherit;
+  border-radius: 4px;
+  padding: 0 8px;
+}
+
+:root #ace_settingsmenu select {
+  width: 180px;
+}
+
+:root #ace_settingsmenu input[type="number"] {
+  width: 5em !important;
+}
+
+:root #ace_settingsmenu input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--ace-panel-accent);
+  vertical-align: middle;
+  margin: 0 0 0 8px;
+}
+
+:root #ace_settingsmenu input[type="checkbox"] + input[type="number"] {
+  margin-left: 8px;
+}
+
+:root #ace_settingsmenu :is(button, select, input):focus-visible {
+  outline: 2px solid var(--ace-panel-accent);
+  outline-offset: -2px;
+}
+
+:root #kbshortcutmenu .ace_optionsMenuKey {
+  color: var(--ace-panel-accent);
+}
+
+:root #kbshortcutmenu .ace_optionsMenuCommand {
+  color: var(--ace-panel-muted);
+}
+
+:root #ace_settingsmenu #controls > tr:last-child > td, :root #ace_settingsmenu #controls > tbody > tr:last-child > td {
+  color: var(--ace-panel-muted);
+  padding-top: 16px;
+  font-size: 12px;
+}
