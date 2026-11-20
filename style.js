@@ -1,9 +1,16 @@
 // define rules for unexposed parts of the shell
 const shellSheet = new CSSStyleSheet();
 shellSheet.replaceSync(`
+  /* MICT has no header, so hide this element to even out spacing */
+  h1.app-title {
+    display: none;
+  }
+
   #menu-button,
   [slot='alignEnd'] oscd-filled-icon-button {
     --md-filled-icon-button-container-color: transparent;
+
+    margin-right: var(--app-bar-logo-gap);
   }
 
   #menu-button oscd-icon {
